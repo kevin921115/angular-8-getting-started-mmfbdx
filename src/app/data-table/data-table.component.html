@@ -1,0 +1,14 @@
+<hot-table
+  [data]="items"
+  [columns]="columns"
+  [col-headers]="headers"
+  (afterChange)="onAfterChange($event)"
+></hot-table>
+
+<button type="button" style="margin: 20px" (click)="onClickSummary()">
+  Show summary
+</button>
+
+<div *ngIf="isShowMessage">
+  {{ message }}
+</div>
